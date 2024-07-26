@@ -40,34 +40,15 @@ export class LandingHomeComponent
     }
 
   
-    reactiveComponent={
-        component:{
-          content:{
-              question: "input the question here?",
-              options:{
-                option1: {
-                    key:"1",
-                    value:"option 1"
-                },
-                option2:{
-                    key:"2",
-                    value:"option 2"
-                },
-                option3:{
-                    key:"3",
-                    value:"option 3"
-                }
-              }
-
+    reactiveComponent = {
+        "component": {
+          "content": {
+            "title": "sample component v2"
           },
-          ui:{},      
+          "ui": {}
         },
-        runtime:{
-          data:{
-             
-          },
-          score:{},
-          feedback:{}
+        "runtime": {
+          "data": {}
         }
       };
   
