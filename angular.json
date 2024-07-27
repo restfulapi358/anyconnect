@@ -72,7 +72,7 @@
 								}
 							],
 							"outputHashing": "all",
-							"extraWebpackConfig": "webpack.prod.config.js"
+							"extraWebpackConfig": "webpack.config.js"
 						},
 						"development": {
 							"buildOptimizer": false,
@@ -90,7 +90,7 @@
 					"configurations": {
 						"production": {
 							"browserTarget": "fuse:build:production",
-							"extraWebpackConfig": "webpack.prod.config.js"
+							"extraWebpackConfig": "webpack.config.js"
 						},
 						"development": {
 							"browserTarget": "fuse:build:development"

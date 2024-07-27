@@ -20,7 +20,6 @@ import { RouterLink } from '@angular/router';
 export class LandingHomeComponent
 {
 
-    REGISTER_KEY= 'Component3121f9dfc5bb427ca055e6521008c7f9834f0976e0ad414d9cb01f97df8bb941';
     /**
      * Constructor
      */
@@ -59,10 +58,9 @@ export class LandingHomeComponent
       };
    
     async StartTest(){
-
-
-        const componentModule = await import('../component/template.component');
-        const TemplateComponent = componentModule[this.REGISTER_KEY];
+      
+        const componentModule = await import('../component/Component3121f9dfc5bb427ca055e6521008c7f987d885a252da4666a4d795fa6eb31346.component');
+        const TemplateComponent = componentModule['Component3121f9dfc5bb427ca055e6521008c7f987d885a252da4666a4d795fa6eb31346'];
 
         this.testContainer.clear();
 
