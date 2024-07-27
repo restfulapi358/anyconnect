@@ -31,7 +31,7 @@ export class LandingHomeComponent
     }
 
     @ViewChild('test', {read:ViewContainerRef}) testContainer!: ViewContainerRef;
-    TemplateCmponent:any;
+   
 
     template={
 
