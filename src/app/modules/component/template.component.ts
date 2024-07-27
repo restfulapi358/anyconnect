@@ -8,7 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-    selector     : 'Component22137053f4da485c97680d4275fc32a9e0513d55b380441a9a29cc1c54384a3btest',
+    selector     : 'Component3121f9dfc5bb427ca055e6521008c7f9834f0976e0ad414d9cb01f97df8bb941',
     standalone   : true,
     templateUrl  : './template.component.html',
     encapsulation: ViewEncapsulation.None,
@@ -17,7 +17,7 @@ import { MatIconModule } from '@angular/material/icon';
     ]
     
 })
-export class TemplateComponent
+export class Component3121f9dfc5bb427ca055e6521008c7f9834f0976e0ad414d9cb01f97df8bb941
 {
 
     @Input() data:any;

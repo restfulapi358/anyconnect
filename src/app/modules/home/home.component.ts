@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ViewChild, ViewContainerRef, ViewEncapsulation } from '@angular/core';
+import { Component, ComponentFactoryResolver, ViewChild, ViewContainerRef, ViewEncapsulation } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -7,29 +7,32 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { RouterLink } from '@angular/router';
-import { TemplateComponent } from '../component/template.component';
 
 @Component({
     selector     : 'landing-home',
     templateUrl  : './home.component.html',
     encapsulation: ViewEncapsulation.None,
     standalone   : true,
-    imports      : [MatButtonModule, RouterLink, MatIconModule, 
-        TemplateComponent,
+    imports      : [MatButtonModule, RouterLink, MatIconModule,
         MatIconModule,  CommonModule, FormsModule, ReactiveFormsModule, MatFormFieldModule,
         MatInputModule, MatRadioModule],
 })
 export class LandingHomeComponent
 {
+
+    REGISTER_KEY= 'Component3121f9dfc5bb427ca055e6521008c7f9834f0976e0ad414d9cb01f97df8bb941';
     /**
      * Constructor
      */
-    constructor()
+    constructor(private componentFactoryResolver: ComponentFactoryResolver)
     {
+
+
+
     }
 
     @ViewChild('test', {read:ViewContainerRef}) testContainer!: ViewContainerRef;
-
+    TemplateCmponent:any;
 
     template={
 
@@ -43,22 +46,30 @@ export class LandingHomeComponent
     reactiveComponent = {
         "component": {
           "content": {
-            "title": "sample component v2"
+            "initText": "<h3>Using Nginx</h3><p>If you have Nginx installed, you can configure it to serve your Angular application.</p><ol><li><strong>Install Nginx</strong> (if not already installed):</li></ol><p><br></p>"
           },
           "ui": {}
         },
         "runtime": {
-          "data": {}
-        }
+          "data": {
+            "htmlText": null
+          }
+        },
+        "constants": {}
       };
-  
    
-    StartTest(){
+    async StartTest(){
+
+
+        const componentModule = await import('../component/template.component');
+        const TemplateComponent = componentModule[this.REGISTER_KEY];
 
         this.testContainer.clear();
 
+        const componentFactory = this.componentFactoryResolver.resolveComponentFactory(TemplateComponent);
+
         console.log('container:' + this.testContainer);
-        const fmComponentRef  = this.testContainer!.createComponent(TemplateComponent);
+        const fmComponentRef  = this.testContainer!.createComponent(componentFactory);
         (fmComponentRef as any).instance.data = this.reactiveComponent;
         fmComponentRef.changeDetectorRef.markForCheck();
 

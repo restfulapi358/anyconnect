@@ -8,7 +8,7 @@ sharedMappings.register(
   path.join(__dirname, 'tsconfig.json'),
   [/* mapped paths to share */]);
 
-  const registerKey = "Component22137053f4da485c97680d4275fc32a9e0513d55b380441a9a29cc1c54384a3btest"; 
+const REGISTER_KEY='Component3121f9dfc5bb427ca055e6521008c7f9834f0976e0ad414d9cb01f97df8bb941';
 
 module.exports = {
 
@@ -28,14 +28,15 @@ module.exports = {
     outputModule: true
   },
   plugins: [
+ 
     new ModuleFederationPlugin({
         library: { type: "module" },
 
         // For remotes (please adjust)
-        name: registerKey,
-        filename: `remoteEntry-${registerKey}.js`,
+        name: REGISTER_KEY,
+        filename: `remoteEntry-${REGISTER_KEY}.js`,
         exposes: {
-          [`./TemplateComponent`]: `.//src/app/modules/component/template.component.ts`,
+          [`./${REGISTER_KEY}`]: `.//src/app/modules/component/template.component.ts`,
         },
 
         // For hosts (please adjust)

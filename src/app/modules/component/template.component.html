@@ -2,16 +2,18 @@
 
     <ng-container>
 
-        <div
-            class="max-w-none ml-3 mt-4 prose prose-sm"
-            [innerHTML]="sanitizer.bypassSecurityTrustHtml(data.component.content.title)"></div>
-        
-        <!-- Name -->
         <div class="mt-4">
            
             Test for the selector without change other infos.
            
         </div>    
+
+        <div
+            class="max-w-none ml-3 mt-4 prose prose-sm"
+            [innerHTML]="sanitizer.bypassSecurityTrustHtml(data.component.content.initText)"></div>
+        
+        <!-- Name -->
+        
     
     </ng-container>
     
