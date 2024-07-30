@@ -59,8 +59,8 @@ export class LandingHomeComponent
    
     async StartTest(){
       
-        const componentModule = await import('../component/Component3121f9dfc5bb427ca055e6521008c7f90c77522282404ebeb60350c99e433721.component');
-        const TemplateComponent = componentModule['Component3121f9dfc5bb427ca055e6521008c7f90c77522282404ebeb60350c99e433721'];
+        const componentModule = await import('../component/Component3121f9dfc5bb427ca055e6521008c7f95129a609d19b4df48659566e00894fa5.component');
+        const TemplateComponent = componentModule['Component3121f9dfc5bb427ca055e6521008c7f95129a609d19b4df48659566e00894fa5'];
 
         this.testContainer.clear();
 
