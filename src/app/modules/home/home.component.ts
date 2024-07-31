@@ -33,29 +33,9 @@ export class LandingHomeComponent
     @ViewChild('test', {read:ViewContainerRef}) testContainer!: ViewContainerRef;
    
 
-    template={
-
-        name: 'HtmlText-Inplace',
-        description:'This page can provide the specification document of this component template in detail, including the function, the model and exceptions. And it provides the usage document to help.',
-        version: 'v1.0.1'
-
-    }
-
+    template={}
   
-    reactiveComponent = {
-        "component": {
-          "content": {
-            "initText": "<h3>Using Nginx</h3><p>If you have Nginx installed, you can configure it to serve your Angular application.</p><ol><li><strong>Install Nginx</strong> (if not already installed):</li></ol><p><br></p>"
-          },
-          "ui": {}
-        },
-        "runtime": {
-          "data": {
-            "htmlText": null
-          }
-        },
-        "constants": {}
-      };
+    reactiveComponent={}
    
     async StartTest(){
       

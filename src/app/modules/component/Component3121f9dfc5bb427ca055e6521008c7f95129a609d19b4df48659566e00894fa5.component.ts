@@ -26,8 +26,4 @@ export class Component3121f9dfc5bb427ca055e6521008c7f95129a609d19b4df48659566e00
      */
      constructor(public sanitizer:DomSanitizer){}
 
-     Select(key){
-        this.data.runtime.data.answer = key;
-    }
-  
 }
