@@ -33,9 +33,9 @@ export class LandingHomeComponent
     @ViewChild('test', {read:ViewContainerRef}) testContainer!: ViewContainerRef;
    
 
-    template={}
+    template={};
   
-    reactiveComponent={}
+    reactiveComponent={};
    
     async StartTest(){
       
