@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ComponentFactoryResolver, ViewChild, ViewContainerRef, ViewEncapsulation } from '@angular/core';
+import { AfterContentInit, Component, ComponentFactoryResolver, ViewChild, ViewContainerRef, ViewEncapsulation } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -17,7 +17,7 @@ import { RouterLink } from '@angular/router';
         MatIconModule,  CommonModule, FormsModule, ReactiveFormsModule, MatFormFieldModule,
         MatInputModule, MatRadioModule],
 })
-export class LandingHomeComponent
+export class LandingHomeComponent implements AfterContentInit
 {
 
     /**
@@ -29,13 +29,31 @@ export class LandingHomeComponent
 
 
     }
+  
 
     @ViewChild('test', {read:ViewContainerRef}) testContainer!: ViewContainerRef;
    
 
-    template={};
+    template={
+      "name": 'React Sample component',
+      "description":'react sample component',
+      "version": 'v1.0'
+    };
   
-    reactiveComponent={};
+    reactiveComponent={
+
+      
+
+    };
+
+
+
+    async ngAfterContentInit() {
+      
+      this.StartTest();
+
+    }
+
    
     async StartTest(){
       
