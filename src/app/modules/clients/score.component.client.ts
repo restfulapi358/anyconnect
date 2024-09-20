@@ -20,7 +20,7 @@ export class ScoreComponentServiceClient {
             'Authorization':'Bearer ' + env.Authorized
           });
 
-          if(env.Authorized==='X-Asynmous-User-ID'){            
+          if(!env.Authorized || env.Authorized==='X-Asynmous-User-ID' ){            
             headers = new HttpHeaders({
                 'Content-Type': 'application/json',  // Example header
                 'X-Asynmous-User-ID':'X-Asynmous-API-ID'
