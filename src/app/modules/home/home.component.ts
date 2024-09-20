@@ -34,16 +34,27 @@ export class LandingHomeComponent implements AfterContentInit
     @ViewChild('test', {read:ViewContainerRef}) testContainer!: ViewContainerRef;
    
 
-    template={
-      "name": 'React Sample component',
-      "description":'react sample component',
-      "version": 'v1.0'
+    template = {
+      "name" : "Fill-in-blank",
+      "description" : "fill-in-blank white-space: normal: This allows the text to wrap onto the next line as needed, which is the default for most block elements.",
+      "version" : "v2.0"
     };
-  
-    reactiveComponent={
-
       
-
+    reactiveComponent = {
+      "component" : {
+        "componentTemplateId": "30a70399b4ed499f9eb8208993b7165c",
+        "templateDeployId": null,
+        "content" : {
+          "question" : "This is the question?"
+        },
+        "ui" : { }
+      },
+      "runtime" : {
+        "data" : {
+          "answer" : "people"
+        }
+      },
+      "constants" : { }
     };
 
 
