@@ -29,6 +29,10 @@ export class Component3121f9dfc5bb427ca055e6521008c7f95129a609d19b4df48659566e00
         'ScoreUrl': 'http://localhost:8081/v3/edu/ReactiveComponentRuntime/score'
     }
 
+    constructor(
+        public sanitizer:DomSanitizer,  
+     ){}
+    
     
    
 }
