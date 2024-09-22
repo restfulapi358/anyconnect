@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { ScoreComponentServiceClient } from '../clients/score.component.client';
+import { ScoreComponentComponent } from '../clients/score-component/score.component';
 
 @Component({
     selector     : 'Component3121f9dfc5bb427ca055e6521008c7f95129a609d19b4df48659566e00894fa5',
@@ -14,7 +15,8 @@ import { ScoreComponentServiceClient } from '../clients/score.component.client';
     templateUrl  : './Component3121f9dfc5bb427ca055e6521008c7f95129a609d19b4df48659566e00894fa5.component.html',
     encapsulation: ViewEncapsulation.None,
     imports:[
-       CommonModule, FormsModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatIconModule,MatRadioModule
+       CommonModule, FormsModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatIconModule,MatRadioModule,
+       ScoreComponentComponent
     ]
     
 })
@@ -28,22 +30,5 @@ export class Component3121f9dfc5bb427ca055e6521008c7f95129a609d19b4df48659566e00
     }
 
     
-    /**
-     * Constructor
-     */
-     constructor(
-         public sanitizer:DomSanitizer,
-         public scoreComponentServiceClient: ScoreComponentServiceClient
-         ){}
-
-
-    Score(){
-        this.scoreComponentServiceClient.Score(this.data, this.env).subscribe(
-            scoreResponse=>{
-                console.log(scoreResponse);
-                this.data.runtime.score= scoreResponse.runtime.score;
-            }
-        )
-    }
-
+   
 }

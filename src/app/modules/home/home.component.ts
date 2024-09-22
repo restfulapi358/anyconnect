@@ -42,16 +42,15 @@ export class LandingHomeComponent implements AfterContentInit
       
     reactiveComponent={
       "component" : {
-        "componentTemplateId": "30a70399b4ed499f9eb8208993b7165c",
-        "templateDeployId": null,
-        "content" : {
-          "question" : "This is the question?"
+        "componentTemplateId": "a057a9eeb46843258285818c26a75ea8",
+        "templateDeployId": "66ef735fc6f87915fcb69eef",
+        "content" : {       
         },
         "ui" : { }
       },
       "runtime" : {
         "data" : {
-          "answer" : "people"
+          "word" : "people"
         }
       },
       "constants" : { }
