@@ -35,26 +35,23 @@ export class LandingHomeComponent implements AfterContentInit
    
 
     template={
-      "name" : "Fill-in-blank",
-      "description" : "fill-in-blank white-space: normal: This allows the text to wrap onto the next line as needed, which is the default for most block elements.",
-      "version" : "v2.0"
-    };
+  "name" : "Test2",
+  "description" : "test 2 for score and attribute owner",
+  "version" : "v1.0"
+};
       
     reactiveComponent={
-      "component" : {
-        "componentTemplateId": "a057a9eeb46843258285818c26a75ea8",
-        "templateDeployId": "66ef735fc6f87915fcb69eef",
-        "content" : {       
-        },
-        "ui" : { }
-      },
-      "runtime" : {
-        "data" : {
-          "word" : "people"
-        }
-      },
-      "constants" : { }
-    };
+  "component" : {
+    "componentTemplateId" : "0d6e5fb78916454a8df3e118e170770e",
+    "templateDeployId" : null,
+    "content" : { },
+    "ui" : { }
+  },
+  "runtime" : {
+    "data" : { }
+  },
+  "scores" : [ ]
+};
 
 
 
@@ -67,8 +64,8 @@ export class LandingHomeComponent implements AfterContentInit
    
     async StartTest(){
       
-        const componentModule = await import('../component/Component3121f9dfc5bb427ca055e6521008c7f95129a609d19b4df48659566e00894fa5.component');
-        const TemplateComponent = componentModule['Component3121f9dfc5bb427ca055e6521008c7f95129a609d19b4df48659566e00894fa5'];
+        const componentModule = await import('../component/Component0d6e5fb78916454a8df3e118e170770e868e24ca591f40afb75b61374358b921.component');
+        const TemplateComponent = componentModule['Component0d6e5fb78916454a8df3e118e170770e868e24ca591f40afb75b61374358b921'];
 
         this.testContainer.clear();
 
