@@ -10,9 +10,9 @@ import { ScoreComponentServiceClient } from '../clients/score.component.client';
 import { ScoreComponentComponent } from '../clients/score-component/score.component';
 
 @Component({
-    selector     : 'Component3121f9dfc5bb427ca055e6521008c7f95129a609d19b4df48659566e00894fa5',
+    selector     : 'Componentnull13fe833d36774f8394b65f1e1dd3beec',
     standalone   : true,
-    templateUrl  : './Component3121f9dfc5bb427ca055e6521008c7f95129a609d19b4df48659566e00894fa5.component.html',
+    templateUrl  : './Componentnull13fe833d36774f8394b65f1e1dd3beec.component.html',
     encapsulation: ViewEncapsulation.None,
     imports:[
        CommonModule, FormsModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatIconModule,MatRadioModule,
@@ -20,7 +20,7 @@ import { ScoreComponentComponent } from '../clients/score-component/score.compon
     ]
     
 })
-export class Component3121f9dfc5bb427ca055e6521008c7f95129a609d19b4df48659566e00894fa5
+export class Componentnull13fe833d36774f8394b65f1e1dd3beec
 {
 
     @Input() data:any;
